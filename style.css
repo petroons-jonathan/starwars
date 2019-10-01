@@ -1,0 +1,87 @@
+body {
+    border:solid 1px yellow;
+    /*taille de la page */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    /*disposition des éléments*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*fond star wars*/
+    background-image: url(img/star.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.boxTitre {
+    border:solid 3px;
+    font-size: 34px;
+    color:yellow;
+    margin-top: -5em;
+    font-family: 'Press Start 2P', cursive;
+    /*animation*/
+    /*apparition et disparition progressive*/
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-name: titre;
+    animation-timing-function:ease-out;
+}
+/*animation*/
+@keyframes titre {
+    0% {
+        opacity:0;
+    }
+    20% {
+        opacity:1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.boxTexte {
+    border:solid 3px white;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    text-align: justify;
+    width:40vw;
+    height: 70vh;
+    bottom:0;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(15deg);
+}
+.container {
+    animation-name: defilement;
+    animation-delay: 1s;
+    animation-duration: 100s;
+	position: absolute;
+	top: 100%;
+}
+.nomFilm {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.nomChapitre {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+@keyframes defilement {
+    0% {
+        top:100%
+    }
+    100% {
+        top:-170%
+    }
+}
