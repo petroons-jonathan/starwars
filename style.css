@@ -1,5 +1,4 @@
 body {
-    border:solid 1px yellow;
     /*taille de la page */
     height: 100vh;
     width: 100vw;
@@ -16,7 +15,6 @@ body {
     background-size:cover;
 }
 .boxTitre {
-    border:solid 3px;
     font-size: 34px;
     color:yellow;
     margin-top: -5em;
@@ -46,18 +44,17 @@ body {
     }
 }
 .boxTexte {
-    border:solid 3px white;
     color: yellow;
     font-weight: bold;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
     text-align: justify;
     width:40vw;
-    height: 70vh;
+    height: 100vh;
     bottom:0;
     overflow: hidden;
     transform-origin: 50% 100%;
-    transform: perspective(300px) rotateX(15deg);
+    transform: perspective(300px) rotateX(20deg);
 }
 .container {
     animation-name: defilement;
